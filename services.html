@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Послуги й ціни — Liora (демо)</title>
+<meta name="description" content="Прайс студії краси Liora: волосся, нігті, брови й вії, догляд.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Головна</a> / Послуги й ціни</div>
+    <h1>Послуги <em>й ціни</em></h1>
+    <p class="lead">Ціни вказані за процедуру. Остаточна вартість складного фарбування залежить від довжини й густоти волосся: майстер назве її до початку роботи.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="tabs" role="group" aria-label="Категорії послуг">
+      <button class="tab on" data-tab="all">Усі</button>
+      <button class="tab" data-tab="hair">Волосся</button>
+      <button class="tab" data-tab="nails">Нігті</button>
+      <button class="tab" data-tab="brows">Брови й вії</button>
+      <button class="tab" data-tab="care">Догляд</button>
+    </div>
+
+    <div class="price-group" data-cat="hair">
+      <h3>✂️ Волосся</h3>
+      <div class="row"><div class="t"><b>Жіноча стрижка</b><small>миття, стрижка, укладка</small></div><span class="dur">60 хв</span><span class="pr">600 ₴</span></div>
+      <div class="row"><div class="t"><b>Чоловіча стрижка</b><small>машинка й ножиці, миття</small></div><span class="dur">45 хв</span><span class="pr">450 ₴</span></div>
+      <div class="row"><div class="t"><b>Фарбування в один тон</b><small>без урахування матеріалу на довге волосся</small></div><span class="dur">2 год</span><span class="pr">від 1 400 ₴</span></div>
+      <div class="row"><div class="t"><b>Складне фарбування</b><small>балаяж, шатуш, airtouch</small></div><span class="dur">3–5 год</span><span class="pr">від 2 800 ₴</span></div>
+      <div class="row"><div class="t"><b>Укладка</b><small>локони, об'єм, гладкість</small></div><span class="dur">40 хв</span><span class="pr">450 ₴</span></div>
+    </div>
+
+    <div class="price-group" data-cat="nails">
+      <h3>💅 Нігті</h3>
+      <div class="row"><div class="t"><b>Манікюр без покриття</b></div><span class="dur">45 хв</span><span class="pr">400 ₴</span></div>
+      <div class="row"><div class="t"><b>Манікюр з покриттям гель-лак</b><small>зняття, манікюр, покриття</small></div><span class="dur">1,5 год</span><span class="pr">600 ₴</span></div>
+      <div class="row"><div class="t"><b>Педикюр з покриттям</b></div><span class="dur">1,5 год</span><span class="pr">750 ₴</span></div>
+      <div class="row"><div class="t"><b>Дизайн</b><small>за 1 ніготь</small></div><span class="dur">—</span><span class="pr">від 20 ₴</span></div>
+    </div>
+
+    <div class="price-group" data-cat="brows">
+      <h3>👁 Брови й вії</h3>
+      <div class="row"><div class="t"><b>Корекція брів</b></div><span class="dur">30 хв</span><span class="pr">300 ₴</span></div>
+      <div class="row"><div class="t"><b>Корекція й фарбування</b></div><span class="dur">45 хв</span><span class="pr">400 ₴</span></div>
+      <div class="row"><div class="t"><b>Ламінування брів</b></div><span class="dur">60 хв</span><span class="pr">650 ₴</span></div>
+      <div class="row"><div class="t"><b>Ламінування вій</b></div><span class="dur">60 хв</span><span class="pr">700 ₴</span></div>
+    </div>
+
+    <div class="price-group" data-cat="care">
+      <h3>🌿 Догляд</h3>
+      <div class="row"><div class="t"><b>Чистка обличчя</b><small>комбінована</small></div><span class="dur">90 хв</span><span class="pr">900 ₴</span></div>
+      <div class="row"><div class="t"><b>Догляд за волоссям</b><small>відновлення, маска, масаж голови</small></div><span class="dur">45 хв</span><span class="pr">600 ₴</span></div>
+      <div class="row"><div class="t"><b>Пілінг шкіри голови</b></div><span class="dur">30 хв</span><span class="pr">500 ₴</span></div>
+    </div>
+
+    <div class="cta reveal" style="margin-top:50px">
+      <h2>Обрали послугу?</h2>
+      <p>Бот покаже вільний час у потрібного майстра й нагадає про візит.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="https://t.me/vizytko_bot" target="_blank" rel="noopener">Записатися онлайн</a></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Контакти — Liora (демо)</title>
+<meta name="description" content="Адреса, графік і онлайн-запис у студію краси Liora.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Головна</a> / Контакти</div>
+    <h1>Чекаємо <em>на вас</em></h1>
+    <p class="lead">Найшвидше записатися через Telegram-бота. Або залиште заявку, і адміністратор передзвонить.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap contact">
+    <div class="info reveal">
+      <div class="info-item"><div class="ico">📍</div><div><b>Адреса</b><span>м. Умань (адреса умовна)</span></div></div>
+      <div class="info-item"><div class="ico">📞</div><div><b>Телефон</b><span>+380 00 000 00 00</span></div></div>
+      <div class="info-item"><div class="ico">🕘</div><div style="flex:1"><b>Графік</b>
+        <table class="hours"><tr><td>Пн–Пт</td><td>9:00–20:00</td></tr><tr><td>Субота</td><td>10:00–18:00</td></tr><tr><td>Неділя</td><td>вихідний</td></tr></table></div></div>
+      <div class="info-item" style="background:var(--plum-soft);border-color:transparent"><div class="ico">💬</div><div><b>Онлайн-запис 24/7</b><span>Оберіть послугу, майстра й вільний час у Telegram.</span><br><a class="btn btn-primary btn-sm" style="margin-top:12px" href="https://t.me/vizytko_bot" target="_blank" rel="noopener">Відкрити бота</a></div></div>
+      <div class="map"><div class="pin">📍</div><a class="btn btn-ghost btn-sm" style="background:#fff" href="https://maps.google.com/?q=Умань" target="_blank" rel="noopener">Відкрити на карті</a></div>
+    </div>
+
+    <form class="book reveal" id="book" novalidate>
+      <h3>Заявка на запис</h3>
+      <div class="two">
+        <div class="field"><label for="f-name">Ім'я</label><input id="f-name" name="name" required minlength="2" placeholder="Як до вас звертатися"></div>
+        <div class="field"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" required pattern="[+0-9 ()-]{10,}" placeholder="+380 __ ___ __ __"></div>
+      </div>
+      <div class="field"><label for="f-service">Послуга</label>
+        <select id="f-service" name="service" required>
+          <option value="">Оберіть послугу</option><option>Стрижка</option><option>Фарбування</option><option>Манікюр</option><option>Педикюр</option><option>Брови й вії</option><option>Догляд</option><option>Інше / консультація</option>
+        </select></div>
+      <div class="two">
+        <div class="field"><label for="f-day">Бажаний день</label><input id="f-day" name="day" type="date"></div>
+        <div class="field"><label for="f-time">Час</label>
+          <select id="f-time" name="time"><option>Будь-який</option><option>Ранок (9–12)</option><option>День (12–16)</option><option>Вечір (16–20)</option></select></div>
+      </div>
+      <div class="field"><label for="f-msg">Коментар</label><textarea id="f-msg" name="msg" placeholder="Наприклад: до майстрині Олени, волосся до плечей"></textarea></div>
+      <button class="btn btn-primary" type="submit">Надіслати заявку</button>
+      <div class="form-ok" id="form-ok" role="status">✅ Дякуємо! Це демо-сайт, тому заявка нікуди не надіслана. На сайті реального салону вона миттєво прийде адміністратору в Telegram і в Google Таблицю.</div>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/main.js"></script>
+</body>
+</html>
