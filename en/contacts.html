@@ -31,7 +31,8 @@
       <div class="map"><div class="pin">📍</div><a class="btn btn-ghost btn-sm" style="background:#fff" href="https://maps.google.com/?q=Uman" target="_blank" rel="noopener">Open on the map</a></div>
     </div>
 
-    <form class="book reveal" id="book" novalidate>
+    <form class="book reveal" id="book" novalidate data-endpoint="https://vizytko-form.vizytko-bots.workers.dev/">
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <h3>Booking request</h3>
       <div class="two">
         <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required minlength="2" placeholder="How should we address you"></div>

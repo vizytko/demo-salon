@@ -177,6 +177,8 @@ form.book { background: var(--paper); border: 1px solid var(--line); border-radi
 .two { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px }
 .form-ok { display: none; padding: 18px; border-radius: 14px; background: var(--sage-soft); color: #3E553E; font-size: 15px }
 .form-ok.show { display: block }
+.form-ok.err { background: #FBE9E7; color: #8A2C25 }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden }
 .map { margin-top: 18px; aspect-ratio: 16/9; border-radius: 20px; overflow: hidden; position: relative;
   background: linear-gradient(0deg, transparent 49.5%, #fff 49.5% 50.5%, transparent 50.5%) 0 0/80px 80px, linear-gradient(90deg, transparent 49.5%, #fff 49.5% 50.5%, transparent 50.5%) 0 0/80px 80px, #E3E8E1 }
 .map .pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -100%); font-size: 40px }
