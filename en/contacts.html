@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contacts — Liora (demo)</title>
+<meta name="description" content="Address, opening hours and online booking for the Liora beauty studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Contacts</div>
+    <h1>We are <em>waiting for you</em></h1>
+    <p class="lead">The fastest way to book is the Telegram bot. Or leave a request and the administrator will call you back.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap contact">
+    <div class="info reveal">
+      <div class="info-item"><div class="ico">📍</div><div><b>Address</b><span>Uman, Ukraine (sample address)</span></div></div>
+      <div class="info-item"><div class="ico">📞</div><div><b>Phone</b><span>+380 00 000 00 00</span></div></div>
+      <div class="info-item"><div class="ico">🕘</div><div style="flex:1"><b>Opening hours</b>
+        <table class="hours"><tr><td>Mon–Fri</td><td>9:00–20:00</td></tr><tr><td>Saturday</td><td>10:00–18:00</td></tr><tr><td>Sunday</td><td>closed</td></tr></table></div></div>
+      <div class="info-item" style="background:var(--plum-soft);border-color:transparent"><div class="ico">💬</div><div><b>Online booking 24/7</b><span>Choose a service, a specialist and a free time in Telegram.</span><br><a class="btn btn-primary btn-sm" style="margin-top:12px" href="https://t.me/vizytko_bot" target="_blank" rel="noopener">Open the bot</a></div></div>
+      <div class="map"><div class="pin">📍</div><a class="btn btn-ghost btn-sm" style="background:#fff" href="https://maps.google.com/?q=Uman" target="_blank" rel="noopener">Open on the map</a></div>
+    </div>
+
+    <form class="book reveal" id="book" novalidate>
+      <h3>Booking request</h3>
+      <div class="two">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required minlength="2" placeholder="How should we address you"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" required pattern="[+0-9 ()-]{10,}" placeholder="+380 __ ___ __ __"></div>
+      </div>
+      <div class="field"><label for="f-service">Service</label>
+        <select id="f-service" name="service" required>
+          <option value="">Choose a service</option><option>Haircut</option><option>Colouring</option><option>Manicure</option><option>Pedicure</option><option>Brows &amp; lashes</option><option>Care</option><option>Other / consultation</option>
+        </select></div>
+      <div class="two">
+        <div class="field"><label for="f-day">Preferred day</label><input id="f-day" name="day" type="date"></div>
+        <div class="field"><label for="f-time">Time</label>
+          <select id="f-time" name="time"><option>Any</option><option>Morning (9–12)</option><option>Daytime (12–16)</option><option>Evening (16–20)</option></select></div>
+      </div>
+      <div class="field"><label for="f-msg">Comment</label><textarea id="f-msg" name="msg" placeholder="For example: with Olena, shoulder-length hair"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send request</button>
+      <div class="form-ok" id="form-ok" role="status">✅ Thank you! This is a demo site, so the request was not sent anywhere. On a real salon's website it arrives instantly to the administrator in Telegram and in a Google Sheet.</div>
+    </form>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="../assets/main.js"></script>
+</body>
+</html>

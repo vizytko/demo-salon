@@ -225,3 +225,7 @@ footer a:hover { color: var(--plum) }
   *, *::before, *::after { animation: none !important; transition: none !important }
   .js .reveal { opacity: 1; transform: none }
 }
+
+/* Перемикач мови UA/EN у шапці */
+.lang-switch{font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--plum,#5A2F4C);border:1.5px solid currentColor;border-radius:999px;padding:6px 12px;text-decoration:none;opacity:.8;transition:opacity .2s}
+.lang-switch:hover{opacity:1}

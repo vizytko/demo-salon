@@ -1,30 +1,51 @@
 document.documentElement.classList.add("js");
 
-// Однакові шапка й підвал на всіх сторінках
-const PAGES = [
-  ["index.html", "Головна"], ["services.html", "Послуги й ціни"], ["masters.html", "Майстри"],
-  ["gallery.html", "Роботи"], ["contacts.html", "Контакти"],
-];
+// Однакові шапка й підвал на всіх сторінках; мова береться з <html lang="uk|en">
+const LANG = document.documentElement.lang === "en" ? "en" : "uk";
+const T = {
+  uk: {
+    pages: [["index.html", "Головна"], ["services.html", "Послуги й ціни"], ["masters.html", "Майстри"],
+            ["gallery.html", "Роботи"], ["contacts.html", "Контакти"]],
+    demo: "<b>Демо-сайт</b> для портфоліо. Студія Liora вигадана, дані умовні.",
+    studio: "студія краси", book: "Записатися", menu: "Меню",
+    about: "Студія краси для тих, хто цінує час і якість. Запис онлайн 24/7.",
+    pagesH: "Сторінки", contactsH: "Контакти", addr: "м. Умань (адреса умовна)", hours: "Пн–Сб 9:00–20:00",
+    tg: "Записатися в Telegram →", copy: "© 2026 Liora · демо-сайт · зроблено Візитко",
+    switchTo: "EN", switchHref: p => "en/" + p,
+  },
+  en: {
+    pages: [["index.html", "Home"], ["services.html", "Services & prices"], ["masters.html", "Specialists"],
+            ["gallery.html", "Our work"], ["contacts.html", "Contacts"]],
+    demo: "<b>Demo site</b> for a portfolio. The Liora studio is fictional, data is sample.",
+    studio: "beauty studio", book: "Book now", menu: "Menu",
+    about: "A beauty studio for those who value time and quality. Online booking 24/7.",
+    pagesH: "Pages", contactsH: "Contacts", addr: "Uman, Ukraine (sample address)", hours: "Mon–Sat 9:00–20:00",
+    tg: "Book in Telegram →", copy: "© 2026 Liora · demo site · made by Vizytko",
+    switchTo: "UA", switchHref: p => "../" + p,
+  },
+}[LANG];
+const PAGES = T.pages;
 const BOT = "https://t.me/vizytko_bot";
 const here = location.pathname.split("/").pop() || "index.html";
 
 document.getElementById("site-header").innerHTML = `
-  <div class="demo-bar"><b>Демо-сайт</b> для портфоліо. Студія Liora вигадана, дані умовні.</div>
+  <div class="demo-bar">${T.demo}</div>
   <header id="hdr"><div class="wrap">
-    <a href="index.html" class="logo">Liora<span>студія краси</span></a>
+    <a href="index.html" class="logo">Liora<span>${T.studio}</span></a>
     <nav class="main" id="nav">${PAGES.map(([h, t]) => `<a href="${h}"${h === here ? ' class="active" aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
     <div style="display:flex;gap:10px;align-items:center">
-      <a class="btn btn-primary btn-sm head-book" href="${BOT}" target="_blank" rel="noopener">Записатися</a>
-      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+      <a class="lang-switch" href="${T.switchHref(here)}" aria-label="Language">${T.switchTo}</a>
+      <a class="btn btn-primary btn-sm head-book" href="${BOT}" target="_blank" rel="noopener">${T.book}</a>
+      <button class="burger" id="burger" aria-label="${T.menu}" aria-expanded="false"><span></span></button>
     </div>
   </div></header>`;
 
 document.getElementById("site-footer").innerHTML = `
   <footer><div class="wrap">
-    <div><a href="index.html" class="logo">Liora</a><p style="margin-top:12px;max-width:34ch">Студія краси для тих, хто цінує час і якість. Запис онлайн 24/7.</p></div>
-    <div><h4>Сторінки</h4><ul>${PAGES.map(([h, t]) => `<li><a href="${h}">${t}</a></li>`).join("")}</ul></div>
-    <div><h4>Контакти</h4><ul><li>м. Умань (адреса умовна)</li><li>+380 00 000 00 00</li><li>Пн–Сб 9:00–20:00</li><li><a href="${BOT}" target="_blank" rel="noopener">Записатися в Telegram →</a></li></ul></div>
-    <div class="copy">© 2026 Liora · демо-сайт · зроблено Візитко</div>
+    <div><a href="index.html" class="logo">Liora</a><p style="margin-top:12px;max-width:34ch">${T.about}</p></div>
+    <div><h4>${T.pagesH}</h4><ul>${PAGES.map(([h, t]) => `<li><a href="${h}">${t}</a></li>`).join("")}</ul></div>
+    <div><h4>${T.contactsH}</h4><ul><li>${T.addr}</li><li>+380 00 000 00 00</li><li>${T.hours}</li><li><a href="${BOT}" target="_blank" rel="noopener">${T.tg}</a></li></ul></div>
+    <div class="copy">${T.copy}</div>
   </div></footer>`;
 
 const hdr = document.getElementById("hdr");
